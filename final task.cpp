@@ -5,7 +5,7 @@ using namespace std;
 
     struct stcount
     {
-        int znach; 
+        int num; 
         int count = 0; 
     };
 
@@ -27,14 +27,14 @@ using namespace std;
 
                 if (counter[x].count == 0) // если элемент еще не посчитан, добавим +1
                 {
-                    counter[x].znach = a[i];
+                    counter[x].num = a[i];
 
                     counter[x].count++;
 
                     break;
                 }
 
-                else if (counter[x].znach == a[i]) // если элемент посчитан и значение == этому элементу
+                else if (counter[x].num == a[i]) // если элемент посчитан и значение == этому элементу
                 {
                     counter[x].count++; // увеличим счетчик
 
@@ -48,7 +48,7 @@ using namespace std;
         for (int i = 0; i < max; i++)
             if (counter[i].count == 1) {
 
-                cout << counter[i].znach << ",";
+                cout << counter[i].num << ",";
             }
 
 
